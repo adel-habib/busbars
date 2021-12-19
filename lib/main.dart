@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
-
+import 'InputScreens/nBusBarsPage.dart';
+import 'InputScreens/nbars_page.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -14,10 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark().copyWith(
+        primaryColor: const Color(0xff121530),
+        scaffoldBackgroundColor: const Color(0xff090F31), // Choose the background color Color(0xffHEX)
       ),
-      home: const HomePage(),
+      home: NBusBarsPage(),
     );
   }
 }
